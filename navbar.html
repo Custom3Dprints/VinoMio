@@ -1,0 +1,73 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vino Mío</title>
+    <link rel="stylesheet" href="navbar.css">
+
+
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <h1 id="navbar__logo">
+                <img src="images/logo.png" alt="logo">
+                Vino Mío
+            </h1>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu">
+                <li class="navbar__">
+                    <a class="navbar__links" onclick="Home()">
+                        Home
+                    </a>
+                </li>
+                <li class="navbar__" id="Menu">
+                    <a class="navbar__links" onclick="Menu()">
+                        Menu
+                    </a>
+                </li>
+                <li class="navbar__">
+                    <a class="navbar__links" onclick="Reservations()">
+                        Reservations
+                    </a>
+                </li>
+                <li class="navbar__">
+                    <a class="navbar__links" onclick="Events()">
+                        Events
+                    </a>
+                </li>
+                <li class="navbar__">
+                    <a class="navbar__links" onclick="About()">
+                        About
+                    </a>
+                </li>
+                <li class="navbar__">
+                    <a class="navbar__links" onclick="Reviews()">
+                        Reviews
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <script src="navbar.js"></script>
+        <script>
+            //navbar
+            const menu = document.querySelector('#mobile-menu');
+            const menuLinks = document.querySelector('.navbar__menu');
+            const navLogo = document.querySelector('#navbar__logo')
+
+            //Mobile Menu
+            menu.addEventListener('click', function(){
+                menu.classList.toggle('is-active');
+                menuLinks.classList.toggle('active');
+            });
+        </script>
+    </nav>
+</body>
+</html>
