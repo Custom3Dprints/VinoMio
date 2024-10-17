@@ -23,51 +23,37 @@
             </div>
             <ul class="navbar__menu">
                 <li class="navbar__">
-                    <a class="navbar__links" onclick="Home()">
+                    <a class="navbar__links" id="home-link">
                         Home
                     </a>
                 </li>
                 <li class="navbar__" id="Menu">
-                    <a class="navbar__links" onclick="Menu()">
+                    <a class="navbar__links" id="menu-link">
                         Menu
                     </a>
                 </li>
                 <li class="navbar__">
-                    <a class="navbar__links" onclick="Reservations()">
+                    <a class="navbar__links" id="reservations-link">
                         Reservations
                     </a>
                 </li>
                 <li class="navbar__">
-                    <a class="navbar__links" onclick="Events()">
+                    <a class="navbar__links" id="events-link">
                         Events
                     </a>
                 </li>
                 <li class="navbar__">
-                    <a class="navbar__links" onclick="About()">
+                    <a class="navbar__links" id="about-link">
                         About
                     </a>
                 </li>
                 <li class="navbar__">
-                    <a class="navbar__links" onclick="Reviews()">
+                    <a class="navbar__links" id="reviews-link">
                         Reviews
                     </a>
                 </li>
             </ul>
         </div>
-
-        <script src="navbar.js"></script>
-        <script>
-            //navbar
-            const menu = document.querySelector('#mobile-menu');
-            const menuLinks = document.querySelector('.navbar__menu');
-            const navLogo = document.querySelector('#navbar__logo')
-
-            //Mobile Menu
-            menu.addEventListener('click', function(){
-                menu.classList.toggle('is-active');
-                menuLinks.classList.toggle('active');
-            });
-        </script>
     </nav>
 </body>
 </html>

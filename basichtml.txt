@@ -10,3 +10,14 @@
     <script src="navbar.js"></script>
 </body>
 </html>
+
+
+Enviroment:
+images/
+    /menu
+        menu1.png
+
+Home.html
+navbar.html
+navbar.js
+navbar.css
