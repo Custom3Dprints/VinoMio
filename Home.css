@@ -1,4 +1,5 @@
-body{
+
+body{  
     background-image: url('images/cover.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -10,20 +11,20 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh; /* Make body full screen height */
+    height: 120vh; /* Make body full screen height */
     display: flex;
     flex-direction: column; /* Stack content vertically */
     justify-content: space-between; /* Push footer to bottom */
 }
 
+
 /* Footer */
 .footer {
-    color: #fff;
+    background: rgb(253, 244, 232);
     padding: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
-    
 }
 
 .bottom-row {
@@ -32,14 +33,14 @@ body{
     justify-content: space-around; /* Spread content evenly */
     max-width: 1300px; /* Limit maximum width */
     width: 100%; /* Ensure full width */
-    padding: 0 20px; /* Add padding for spacing */
 }
 
 .bottom-cols {
     flex: 0 1 300px; /* Allow items to grow, shrink, and have a preferred width */
     max-width: 300px; /* Limit maximum width */
-    padding: 0 10px; /* Add padding for spacing */
-    margin-bottom: 20px; /* Add margin for spacing */
-    
 }
-  
+
+.bottom-cols p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
