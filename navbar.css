@@ -132,11 +132,11 @@
         transition: all 0.5s ease;
         height: 50vh;
         z-index: -1;
-        background: #ffffff;
+        background: rgb(253, 244, 232);
     }
 
     .navbar__menu.active{
-        background: #ffffff;
+        background: rgb(253, 244, 232);
         top: 100%;
         opacity: 1;
         transition: all 0.5s ease;
