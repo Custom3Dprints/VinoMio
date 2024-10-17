@@ -1,6 +1,9 @@
+.main{
+    border: 2px black solid;
+}
 
 .menu-images{
-
+    border: 2px solid red;
     height: auto;
     
     display: flex;
@@ -10,8 +13,8 @@
 
 .imgs{
     display: flex;
-
-    width: 60%;
+    border: rgb(109, 251, 93) solid 2px;
+    width: 70%;
 }
 
 .imgs img{
