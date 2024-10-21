@@ -13,26 +13,22 @@
 
 
 My Enviroment:
-images/
-    img1.png
-    /menu
-        menu1.png
+dist/
 node_modules/
-    /firebase
-        firestore
-.gitignore
+public/
+    html files
+src/
+    /images
+    /styles
+        .css
+    firebase-config.js
+    navbar.js
+    Reservations.js
+    Reviews.js
 .env
+.gitignore
 package.json
-package-lock.json
-Home.html
-navbar.html
-navbar.js
-navbar.css
-Reservations.css
-Reservations.html
-Reservations.js
-Reservations.mjs
-firebase-config.js
+webpack.config.js
 
 
 
@@ -63,5 +59,12 @@ const firebaseConfig = {
 
 
 
-//prompt
+i want to keep it a dropdown for times but i only want these times available if that time hasn't passed. how?
+
+//prompt for email
 how would i go about using amazon ses. be doing the steps needed, are there any criteria i need to meet? my only goal for now is to be able to send emails with the information collected from user. I am only sending emials to 2 email address each time the submit button is clicked. I also want there to be a cancel reservation button in each email at the bottom so that when clicked it will auto cancel the reservation and send another email to person 2 saying  the details of the canceled reservation
+
+//prompt for google calender:
+i have a collection in firestone database: name, emial, phone number, number of guests, time, date.
+
+
