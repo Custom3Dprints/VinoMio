@@ -42,14 +42,15 @@ async function submitData() {
                 date: date
             });
             console.log("Reservation added successfully!");
+            setTimeout(function(){
+                location.reload();
+            }, 800);
+            
             //redirect to confirmation page and send confirmation email
         } catch (error) {
             console.error("Error adding reservation: ", error);
         }
     
-        setTimeout(function(){
-            location.reload();
-        }, 800);
     }
 }
 window.submitData = submitData;
