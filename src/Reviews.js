@@ -1,25 +1,17 @@
-const googleApiKey = process.env.GOOGLE_API_KEY;
-const googlePlaceID = process.env.GOOGLE_PLACE_ID;
+// Function to dynamically create and append images
+function loadImages() {
+    const reviewsContainer = document.getElementById('reviews-container');
+    const totalImages = 9; // Change this to the total number of images you have
 
-console.log('Google API Key:', process.env.GOOGLE_API_KEY);
-console.log('Google Place ID:', process.env.GOOGLE_PLACE_ID);
+    for (let i = 1; i <= totalImages; i++) {
+        const img = document.createElement('img');
+        img.src = `/src/images/reviews/img${i}.png`; // Construct the image source dynamically
+        img.alt = `Review Image ${i}`; // Customize alt text as needed
+        img.className = "review-image"; // Add the class for styling
 
+        reviewsContainer.appendChild(img); // Append image to the container
+    }
+}
 
-fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${googlePlaceID}&key=${googleApiKey}`)
-    .then(response => response.json())
-    .then(data => {
-        const reviews = data.result.reviews;  // Extract reviews from response
-        let reviewsHtml = '';  // Variable to store reviews in HTML format
-        reviews.forEach(review => {
-            // Add review details to the HTML string
-            reviewsHtml += `
-                <div class="review">
-                    <h4>${review.author_name} - ${review.rating} stars</h4>
-                    <p>${review.text}</p>
-                </div>`;
-        });
-        // Insert the HTML string into the 'reviews-container' div
-        document.getElementById('reviews-container').innerHTML = reviewsHtml;
-    })
-    .catch(error => console.error('Error fetching reviews:', error));  // Handle errors
-
+// Call the function to load images when the page loads
+window.onload = loadImages;
