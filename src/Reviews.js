@@ -5,7 +5,7 @@ function loadImages() {
 
     for (let i = 1; i <= totalImages; i++) {
         const img = document.createElement('img');
-        img.src = `./images/reviews/img${i}.png`; // Construct the image source dynamically
+        img.src = `../src/images/reviews/img${i}.png`; // Construct the image source dynamically
         img.alt = `Review Image ${i}`; // Customize alt text as needed
         img.className = "review-image"; // Add the class for styling
 
