@@ -16,11 +16,14 @@ My Enviroment:
 dist/
 node_modules/
 public/
-    html files
+    Home.html
+    navbar.html
 src/
     /images
+        logo.png
     /styles
-        .css
+        Home.css
+        navbar.css
     firebase-config.js
     navbar.js
     Reservations.js
