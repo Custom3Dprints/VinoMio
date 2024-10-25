@@ -6,6 +6,7 @@ module.exports = {
     entry: {
         Reservations: './src/firebase-config.js',
         Reviews: './src/Reviews.js',
+        
     },
     output: {
         filename: '[name].bundle.js',

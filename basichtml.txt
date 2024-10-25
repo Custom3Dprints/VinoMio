@@ -2,12 +2,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VinoMio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="navbar.js"></script>
+    <title>Vino Mío</title>
+    <link rel="stylesheet"  href="../src/styles/Home.css">
+    <script src="../src/navbar.js"></script>
 </head>
 <body>
-    <div id="navbar"></div>
+    <nav id="navbar"></nav>
 </body>
 </html>
 
