@@ -1,6 +1,6 @@
 // Function to dynamically create and append images
 function loadImages() {
-    const reviewsContainer = document.getElementById('reviews-container');
+    const reviewsContainer = document.getElementById('reviewsContainer');
     const totalImages = 9; // Change this to the total number of images you have
 
     for (let i = 1; i <= totalImages; i++) {

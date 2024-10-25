@@ -3,7 +3,7 @@
 
 .content{
     width: 100%;
-    border: 2px red solid;
+
     display: flex;
     flex-direction: column; /* Stack the link and image vertically */
     align-items: center; /* Center the items horizontally */
@@ -16,12 +16,10 @@
     margin: 20px 0; /* Adjust margin as needed */
 
     width: max-content;
-    border: 2px solid rgb(235, 34, 185);
 
 }
 
 .link-container {
-    border: 2px solid rgb(250, 149, 42);
     margin-bottom: 10px; /* Space between the link and the image */
 }
 
@@ -33,14 +31,24 @@
 }
 
 .googleQRimg{
-    border: 2px solid green;
+
     height: 400px;
 }
 
-.reviews-container {
+
+/*Images*/
+
+.rows {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+}
+
+.reviewsContainer {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap onto the next line */
     justify-content: center; /* Center the images horizontally */
+    align-items: flex-start; /* top align the images vertically within the row */
     gap: 20px; /* Optional: space between images */
     margin: 20px 0; /* Optional: margin around the reviews container */
 }
@@ -50,6 +58,4 @@
     height: auto; /* Allow height to scale proportionally */
     max-height: 300px; /* Optional: set a maximum height */
     object-fit: cover; /* Ensure images cover the set dimensions without distortion */
-    border: 2px solid rgb(250, 149, 42); /* Optional: add border to images */
 }
-
