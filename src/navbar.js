@@ -11,7 +11,7 @@ fetch('../public/navbar.html')
 		document.getElementById('home-link').addEventListener('click', () => window.location.href = "../public/Home.html");
 		document.getElementById('menu-link').addEventListener('click', () => window.location.href = "../public/Menu.html");
 		document.getElementById('reservations-link').addEventListener('click', () => window.location.href = "../public/Reservations.html");
-		document.getElementById('events-link').addEventListener('click', () => window.location.href = "../Business-side/Events.html");
+		document.getElementById('events-link').addEventListener('click', () => window.location.href = "../public/Events.html");
 		document.getElementById('about-link').addEventListener('click', () => window.location.href = "../public/About.html");
 		document.getElementById('reviews-link').addEventListener('click', () => window.location.href = "../public/Reviews.html");
 		
