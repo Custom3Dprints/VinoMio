@@ -1,10 +1,9 @@
 {
   	"name": "vinomio",
   	"version": "1.0.0",
-  	"main": "firebase.config.js",
+  	"main": "firebase-config.js",
   	"scripts": {
   	  	"test": "echo \"Error: no test specified\" && exit 1",
-  	  	"start": "node index.js",
   	  	"build": "webpack --mode production",
   	  	"build:test": "webpack --mode development"
   	},
@@ -12,14 +11,11 @@
   	"author": "Marjorie Middlesteadt",
   	"license": "ISC",
   	"dependencies": {
-  	  	"date-fns": "^4.1.0",
   	  	"dotenv": "^16.4.5",
+		"dotenv-webpack": "^8.1.0",
   	  	"firebase": "^10.14.1"
   	},
-  	"description": "",
   	"devDependencies": {
-  	  	"copy-webpack-plugin": "^12.0.2",
-  	  	"dotenv-webpack": "^8.1.0",
   	  	"webpack": "^5.95.0",
   	  	"webpack-cli": "^5.1.4"
   	}
