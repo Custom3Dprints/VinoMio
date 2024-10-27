@@ -21,17 +21,11 @@ h2 {
 .event-card img {
     width: 50%; /* Take up half the width */
     height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
 }
 
-.text {
-    display: flex; /* Ensure the text div is also a flex container */
-    flex-direction: column; /* Stack the p elements vertically */
-    justify-content: center; /* Center the text vertically */
-    padding: 10px; /* Add some padding */
-}
-
-.event-card_name, .event-card_description {
-    margin: 5px 0; /* Optional: add space between paragraphs */
+.p-container p{
+    margin: 10px;
 }
 
 
