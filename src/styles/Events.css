@@ -1,14 +1,87 @@
-/* Optional CSS for styling the events */
-.event-card {
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-    max-width: 400px;
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+#events-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#events-container h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #444;
+}
+
+/* Event Section */
+.event-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Image Styling */
 .event-card img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    border-radius: 4px;
+    border-radius: 8px 8px 0 0;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+/* Event Text */
+.event-card p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.event-card p:first-child {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Description Styling */
+.event-card .event-description {
+    font-size: 1em;
+    line-height: 1.4;
+    color: #666;
+}
+
+/* Responsive Layout */
+@media (min-width: 600px) {
+    .event-card {
+        display: flex;
+        flex-direction: row;
+        padding: 15px;
+    }
+
+    .event-card img {
+        width: 40%;
+        max-height: 100%;
+        margin-right: 15px;
+        border-radius: 8px;
+    }
+
+    .event-card p {
+        margin: 0 0 10px 0;
+    }
 }

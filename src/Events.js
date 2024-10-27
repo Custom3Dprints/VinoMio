@@ -1,6 +1,5 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
-import { get } from 'mongoose';
 
 // Firebase configuration
 const firebaseConfig = {
