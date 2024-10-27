@@ -1,4 +1,4 @@
-
+/*
 //time
 // Function to populate the time dropdown
 function populateTimeDropdown() {
@@ -28,7 +28,7 @@ function populateTimeDropdown() {
 }
 // Populate the dropdown on page load
 window.onload = populateTimeDropdown;
-
+*/
 
 
 

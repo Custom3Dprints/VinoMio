@@ -30,8 +30,15 @@
                     <option value="6">6+</option>
                 </select><br><br>
                 
+                
                 <label for="time">Select Time:</label>
-                <select id="time" name="time"></select>
+                <select id="time" name="time">
+                    <!--temp delete options and uncomment .js-->
+                    <option value="" disabled selected>Select a time</option>
+                    <option value="15:00">3:00</option>
+                </select>
+                
+
 
                 <label for="date">Select Date:</label>
                 <input type="date" id="date" name="date" required><br><br>
@@ -47,6 +54,6 @@
     
     <!-- Your custom JS files -->
     <script type="module" src="../src/firebase-config.js"></script>
-    <script src="../src/Reservations.js"></script>
+    <script src="/src/Reservations.js"></script>
 </body>
 </html>
