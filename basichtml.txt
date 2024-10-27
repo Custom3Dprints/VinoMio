@@ -71,3 +71,37 @@ how would i go about using amazon ses. be doing the steps needed, are there any 
 i have a collection in firestone database: name, emial, phone number, number of guests, time, date.
 
 
+
+.event-card {
+    display: flex; /* Use flexbox for the layout */
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 15px 0; /* Space between event cards */
+    padding: 15px; /* Padding inside the card */
+    overflow: hidden; /* Hide overflow for image */
+}
+
+.event-card img {
+    width: 50%; /* Image takes half the card */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the space without distortion */
+}
+
+.event-card div {
+    padding: 10px; /* Space between image and text */
+    display: flex;
+    flex-direction: column; /* Stack date and description */
+    justify-content: center; /* Center the text vertically */
+}
+
+.event-card p {
+    margin: 5px 0; /* Space between paragraphs */
+    color: #555; /* Text color for description */
+    width: 100%;
+}
+
+.event-card p:first-of-type {
+    font-weight: bold; /* Make the date bold */
+}
