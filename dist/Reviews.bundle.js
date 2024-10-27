@@ -1,0 +1,1 @@
+window.onload=function(){const e=document.getElementById("reviewsContainer");for(let n=1;n<=9;n++){const i=document.createElement("img");i.src=`../src/images/reviews/img${n}.png`,i.alt=`Review Image ${n}`,i.className="review-image",e.appendChild(i)}};
