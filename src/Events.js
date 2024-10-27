@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { get } from 'mongoose';
 
 // Firebase configuration
 const firebaseConfig = {
@@ -26,31 +27,44 @@ async function displayEvents() {
         // Create a section to hold the events
         const section = document.createElement('div');
 
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        console.log(today);
+        const endDate = new Date();
+        // Get current date and date 7 days in the future
+        endDate.setDate(today.getDate() + 6);
+        endDate.setHours(23, 59, 59, 999);
+        console.log(endDate);
+        
         // Loop through each document in the snapshot
         snapshot.forEach(doc => {
             const eventData = doc.data();
+            const getDate = new Date(eventData.date)
+            
+            if (getDate >= today && getDate <= endDate) {
+                // Create elements to display the event data
+                const eventCard = document.createElement('div');
+                eventCard.classList.add('event-card');
 
-            // Create elements to display the event data
-            const eventCard = document.createElement('div');
-            eventCard.classList.add('event-card');
+                const eventImage = document.createElement('img');
+                eventImage.src = eventData.imageUrl;
+                eventImage.alt = 'Event Image';
 
-            const eventDate = document.createElement('p');
-            eventDate.textContent = `Date: ${eventData.date}`;
+                const eventDate = document.createElement('p');
+                eventDate.textContent = `Date: ${eventData.date}`;
 
-            const eventDescription = document.createElement('p');
-            eventDescription.textContent = `Description: ${eventData.description}`;
+                const eventDescription = document.createElement('p');
+                eventDescription.textContent = `Description: ${eventData.description}`;
 
-            const eventImage = document.createElement('img');
-            eventImage.src = eventData.imageUrl;
-            eventImage.alt = 'Event Image';
 
-            // Append the elements to the event card
-            eventCard.appendChild(eventDate);
-            eventCard.appendChild(eventDescription);
-            eventCard.appendChild(eventImage);
+                // Append the elements to the event card
+                eventCard.appendChild(eventImage);
+                eventCard.appendChild(eventDate);
+                eventCard.appendChild(eventDescription);
 
-            // Append each event card to the section
-            section.appendChild(eventCard);
+                // Append each event card to the section
+                section.appendChild(eventCard);
+            }
         });
 
         // Append the section to the events container
