@@ -28,12 +28,12 @@ async function displayEvents() {
 
         const today = new Date();
         today.setHours(0, 0, 0, 0);
-        console.log(today);
+
         const endDate = new Date();
         // Get current date and date 7 days in the future
         endDate.setDate(today.getDate() + 6);
         endDate.setHours(23, 59, 59, 999);
-        console.log(endDate);
+
         
         // Loop through each document in the snapshot
         snapshot.forEach(doc => {
