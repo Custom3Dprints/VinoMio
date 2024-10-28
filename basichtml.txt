@@ -74,3 +74,4 @@ how would i go about using amazon ses. be doing the steps needed, are there any 
 i have a collection in firestone database: name, emial, phone number, number of guests, time, date.
 
 
+
