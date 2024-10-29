@@ -12,7 +12,7 @@
 
     <div class="max-content">
         <div class="container">
-            <div id="reservationForm">
+            <form id="reservationForm">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required><br><br>
                 <label for="email">Email:</label>
@@ -30,20 +30,19 @@
                     <option value="6">6+</option>
                 </select><br><br>
                 
-                
-                <label for="time">Select Time:</label>
-                <select id="time" name="time">
-                    <!--temp delete options and uncomment .js-->
-                    <option value="" disabled selected>Select a time</option>
-                    <option value="15:00">3:00</option>
-                </select>
-                
-
-
                 <label for="date">Select Date:</label>
                 <input type="date" id="date" name="date" required><br><br>
-                <button id="submitBtn">Submit</button> <!--onclick="Submitbtn()"-->
-            </div>
+                
+                <label for="time">Select Time:</label>
+                <select id="time" name="time"></select>
+                
+
+                <!-- Hidden fields for formatted values -->
+                <input type="hidden" id="formattedTime" name="formattedTime">
+                <input type="hidden" id="formattedDate" name="formattedDate">
+
+                <button type="submit" id="submitBtn" value="Send Email">Submit</button> <!--onclick="Submitbtn()"-->
+            </form>
         </div>
     </div>
 
@@ -55,5 +54,52 @@
     <!-- Your custom JS files -->
     <script type="module" src="../src/firebase-config.js"></script>
     <script src="../src/Reservations.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        // Initialize EmailJS with your user ID
+        emailjs.init("yYTksWw1NPD-ZnVyj"); 
+
+        const btn = document.getElementById('submitBtn');
+
+        document.getElementById('reservationForm')
+            .addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const serviceID = 'gmail_service';
+            
+            //milatery time to standard 12 hour
+            const time = document.getElementById('time').value;
+            const [hours, minutes] = time.split(':').map(Number);
+            const formattedTime = `${hours > 12 ? hours - 12 : hours}:${minutes === 0 ? '00' : minutes} ${hours >= 12 ? 'PM' : 'AM'}`;
+
+            //YYYY-MM-DD -> MM/DD/YYYY
+            const date = document.getElementById('date').value;
+            const [year, month, day] = date.split('-');
+            const formattedDate = `${month}/${day}/${year}`;
+
+            // Set hidden input values
+            document.getElementById('formattedTime').value = formattedTime;
+            document.getElementById('formattedDate').value = formattedDate;
+        
+            emailjs.sendForm(serviceID, 'client-side', this)
+                .then(() => {
+                    btn.value = 'Send Email';
+                }, (err) => {
+                    btn.value = 'Send Email';
+                    alert(JSON.stringify(err));
+                });
+                
+                emailjs.sendForm('gmail_service', 'business-side', this)
+                .then(() => {
+                    btn.value = 'Send Email';
+                }, (err) => {
+                    btn.value = 'Send Email';
+                    alert(JSON.stringify(err));
+                });
+            });
+                
+    </script>
+
 </body>
 </html>

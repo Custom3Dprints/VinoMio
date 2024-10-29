@@ -33,6 +33,8 @@ async function submitData() {
         alert("Error! Try Again")
     }else{
         try {
+            //if another reservation hasn't already been made for that day and time
+                //make the times unavailable for day the is selected before button is clicked
             await addDoc(collection(db, "Reservations"), {
                 name: name,
                 email: email,

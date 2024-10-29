@@ -1,4 +1,4 @@
-/*
+
 //time
 // Function to populate the time dropdown
 function populateTimeDropdown() {
@@ -17,6 +17,8 @@ function populateTimeDropdown() {
     timeOptions.forEach(time => {
         const [hours, minutes] = time.split(':').map(Number);
         const timeInMinutes = hours * 60 + minutes;
+
+        /*
         // Only add the option if the time has not passed
         if (timeInMinutes >= currentTimeInMinutes) {
             const option = document.createElement('option');
@@ -24,19 +26,24 @@ function populateTimeDropdown() {
             option.textContent = `${hours > 12 ? hours - 12 : hours}:${minutes === 0 ? '00' : minutes} ${hours >= 12 ? 'PM' : 'AM'}`;
             dropdown.appendChild(option);
         }
+        */
+
+        //temp for testing
+        const option = document.createElement('option');
+        option.value = time;
+        option.textContent = `${hours > 12 ? hours - 12 : hours}:${minutes === 0 ? '00' : minutes} ${hours >= 12 ? 'PM' : 'AM'}`;
+        dropdown.appendChild(option);
     });
 }
 // Populate the dropdown on page load
 window.onload = populateTimeDropdown;
-*/
+
 
 
 
 // Set the minimum date to the current date
 const today = new Date().toISOString().split('T')[0];
 document.getElementById("date").setAttribute("min", today);
-
-
 
 
 
