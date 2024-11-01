@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
 .main {
     display: flex;              /* Use flexbox for layout */
     justify-content: center;    /* Center child elements horizontally */
