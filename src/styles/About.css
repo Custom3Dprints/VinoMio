@@ -1,21 +1,47 @@
-
-body{  
-    background-image: url('../images/cover.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-
+body{
     margin: 0;
     padding: 0;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 110vh; /* Make body full screen height */
+    height: 100vh; /* Make body full screen height */
     display: flex;
     flex-direction: column; /* Stack content vertically */
     justify-content: space-between; /* Push footer to bottom */
 }
+
+
+.slideshow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slideshow-container {
+    position: relative;
+    width: 60%;
+    max-width: 800px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slideshow-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    position: absolute;
+    top: 50%;            /* Center vertically */
+    left: 50%;           /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset to fully center */
+    transition: opacity 1s ease;
+    opacity: 0;
+  }
+  
 
 
 /* Footer */
