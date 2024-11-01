@@ -45,5 +45,20 @@ window.onload = populateTimeDropdown;
 const today = new Date().toISOString().split('T')[0];
 document.getElementById("date").setAttribute("min", today);
 
-
+// Define which days are closed every week (Sunday: 0, Monday: 1)
+const closedWeekDays = [0, 1];
+// Function to check if a day is closed (Sunday or Monday)
+function isClosedDay(dateString) {
+  const date = new Date(dateString + "T00:00:00"); // Explicitly setting time to avoid timezone issues
+  const day = date.getDay();
+  return closedWeekDays.includes(day);
+}
+// Event listener to prevent selecting Sundays and Mondays
+document.getElementById("date").addEventListener("input", (event) => {
+  const selectedDate = event.target.value;
+  if (isClosedDay(selectedDate)) {
+    alert("The store is closed on Sundays and Mondays.");
+    event.target.value = ""; // Clear the selection if it's a closed day
+  }
+});
 
