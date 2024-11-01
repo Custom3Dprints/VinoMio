@@ -39,26 +39,3 @@
     position: relative;
     top: 800px;
 }
-
-
-/* Media queries for responsive design */
-
-@media (max-width: 768px) { /* tablets */
-    .imgs{
-        height: 30vw;
-    }
-}
-
-@media (max-width: 480px) { /* mobile phones */
-    .image-container{
-        flex-direction: column;
-    }
-    .left-img, .right-img{
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    .imgs{
-        width: 100%;
-        height: 50vw;
-    }
-}
