@@ -65,7 +65,7 @@ async function displayEvents() {
 
         if (eventsArray.length === 0) {
             console.log("No events found in the specified date range.");
-            section.innerHTML = "<p>No upcoming events found.</p>";
+            section.innerHTML = "<p>No upcoming events.</p>";
         } else {
             eventsArray.forEach(eventData => {
                 const eventCard = document.createElement('div');

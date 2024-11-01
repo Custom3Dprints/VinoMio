@@ -1,23 +1,34 @@
+.main {
+    display: flex;              /* Use flexbox for layout */
+    justify-content: center;    /* Center child elements horizontally */
+    align-items: center;        /* Center child elements vertically (if needed) */
+    flex-direction: column;
+}
 
-
-
-.content{
+.content {
     width: 100%;
-
-    display: flex;
-    flex-direction: column; /* Stack the link and image vertically */
-    align-items: center; /* Center the items horizontally */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;                /* Enable flexbox */
+    flex-direction: column;       /* Arrange children in a column */
+    align-items: center;          /* Center children horizontally */
 }
 
 .link-qr {
-    display: flex;
-    flex-direction: column; /* Stack the link and image vertically */
-    align-items: center; /* Center the items horizontally */
-    margin: 20px 0; /* Adjust margin as needed */
-
-    width: max-content;
-
+    text-align: center;           /* Center text and inline elements */
+    display: flex;                /* Use flexbox for internal elements */
+    flex-direction: column;       /* Stack link and image vertically */
+    align-items: center;          /* Center internal elements */
 }
+
+.googleQRimg {
+    max-width: 60%;              /* Responsive image */
+    height: auto;                 /* Maintain aspect ratio */
+    margin-top: 10px;             /* Optional: add space above the image */
+}
+
 
 .link-container {
     margin-bottom: 10px; /* Space between the link and the image */
@@ -30,10 +41,6 @@
     text-decoration:none; /* Optional: add underline for links */
 }
 
-.googleQRimg{
-
-    height: 400px;
-}
 
 
 /*Images*/
