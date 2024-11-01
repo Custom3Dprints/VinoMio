@@ -15,3 +15,7 @@ function loadImages() {
 
 // Call the function to load images when the page loads
 window.onload = loadImages;
+
+
+
+
