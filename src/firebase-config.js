@@ -72,9 +72,7 @@ async function submitData() {
                 date: formattedDate
             });
             console.log("Reservation added successfully!");
-            setTimeout(() => {
-                location.reload();
-            }, 800);
+            window.location.href = '../public/SucessPage.html';
         } catch (error) {
             console.error("Error adding reservation: ", error);
         }
