@@ -18,6 +18,15 @@ const app = initializeApp(firebaseConfig);
 // Initialize Firestore
 const db = getFirestore(app);
 
+let closedDaysCache = [];
+
+// Fetch closed days when the page loads and store them in a variable
+window.onload = async function() {
+    closedDaysCache = await getClosedDays();
+    console.log("Closed Days:", closedDaysCache); // Debugging line to check fetched closed days
+};
+
+
 // Add event listener to the submit button
 document.getElementById('submitBtn').addEventListener('click', submitData);
 
@@ -33,13 +42,16 @@ async function submitData() {
     if (!name || !email || !phone || !people || !time || !date) {
         alert("Error! Please fill in all fields.");
     } else {
+        // Ensure the date format matches that in Firestore
+        const formattedDate = new Date(date).toISOString().slice(0, 10); // Format to YYYY-MM-DD
+
         // Check for closed days and reservations before submitting
         const closedDays = await getClosedDays();
-        const reservedTimes = await getReservations(date);
+        const reservedTimes = await getReservations(formattedDate);
 
         // Check if the selected date is a closed day
-        if (closedDays.includes(date)) {
-            alert("The selected date is closed. Please choose another date.");
+        if (closedDays.includes(formattedDate)) {
+            alert("Appoligies for the inconvience, Vino Mío is Closed this day. Please choose another date.");
             return;
         }
 
@@ -57,7 +69,7 @@ async function submitData() {
                 phone,
                 people,
                 time,
-                date
+                date: formattedDate
             });
             console.log("Reservation added successfully!");
             setTimeout(() => {
@@ -69,11 +81,21 @@ async function submitData() {
     }
 }
 
+
+// Add event listener to check date on selection
+document.getElementById('date').addEventListener('change', function() {
+    const selectedDate = new Date(this.value).toISOString().slice(0, 10); // Format to YYYY-MM-DD
+    console.log("Selected Date:", selectedDate); // Debugging line to check selected date format
+
+    if (closedDaysCache.includes(selectedDate)) {
+        alert("Appoligies for the inconvience, Vino Mío is Closed this day. Please choose another date.");
+        this.value = ""; // Clear the selected date
+    }
+});
 // Function to fetch closed days
 async function getClosedDays() {
-    const closedDaysSnapshot = await getDocs(collection(db, "ClosedDays"));
-    const closedDays = closedDaysSnapshot.docs.map(doc => doc.data().date);
-    return closedDays;
+    const closedDaysSnapshot = await getDocs(collection(db, "DaysClosed"));
+    return closedDaysSnapshot.docs.map(doc => doc.data().date);
 }
 
 // Function to fetch reservations for a specific date
@@ -98,7 +120,7 @@ async function DaysOpen() {
 
     // Check if the selected date is a closed day
     if (closedDays.includes(selectedDate)) {
-        alert("The selected date is closed. Please choose another date.");
+        alert("Apologies for the inconvience, Vino Mío is Closed this day. Please choose another date.");
         this.value = ""; // Clear the selected date
         document.getElementById("time").innerHTML = ""; // Clear time options
         return;
