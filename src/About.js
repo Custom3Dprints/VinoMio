@@ -1,5 +1,6 @@
 // List of images in the folder
 const images = [
+    '../src/images/about/Juan_Carlos.jpg',
     '../src/images/about/image1.jpg',
     '../src/images/about/image2.jpg',
     '../src/images/about/image3.jpg',
