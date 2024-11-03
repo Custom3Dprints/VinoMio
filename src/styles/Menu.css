@@ -1,47 +1,28 @@
-.main{
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-}
-
-.menu-images{
-    height: auto;
+.main {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-.image-container{
+.menu-images {
     display: flex;
-    width: 96%;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 
-.left-img, .right-img{
-    width: 20%;
-    padding: 10px;
+.image-container {
+    width: 100%; /* or set a specific width, e.g., 300px */
+    height: auto; /* Set a specific height if needed */
+    overflow: hidden; /* Ensures image doesn't overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.imgs{
-    width: 60%;
+.imgs img {
+    width: 100%; /* Keeps image responsive within container */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: contain; /* Or 'cover' if you want it to fill the container */
 }
 
-.left-img img, .imgs img, .right-img img{
-    max-width: 100%;
-    border-radius: 8%;
-}
-
-#leftimg2{
-    position: relative;
-    top: 240px;
-}
-
-#rightimg1{
-    position: relative;
-    top: 240px;
-}
-
-#rightbottom{
-    position: relative;
-    top: 800px;
-}
