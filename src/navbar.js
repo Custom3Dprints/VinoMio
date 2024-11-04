@@ -1,5 +1,3 @@
-
-
 //navbar.html in Home.html
 // Fetch navbar.html and insert its content into #navbar
 fetch('../public/navbar.html')
