@@ -1,24 +1,9 @@
-*{
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-}
-body{  
+.backgroundimage{  
     background-image: url('../images/cover.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 110vh; /* Make body full screen height */
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    justify-content: space-between; /* Push footer to bottom */
+    background-size: cover;       /* Scale image to cover entire div */
+    background-position: center;  /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    height: 90.4vh;                /* Or whatever height you need */
 }
 
 
@@ -29,6 +14,7 @@ body{
     width: 100%;
     display: flex;
     justify-content: center;
+
 }
 
 .bottom-row {

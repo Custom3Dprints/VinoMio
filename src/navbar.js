@@ -6,7 +6,7 @@ fetch('../public/navbar.html')
 		document.getElementById('navbar').innerHTML = html;
 		
 		// Attach event listeners
-		document.getElementById('home-link').addEventListener('click', () => window.location.href = "../public/Home.html");
+		document.getElementById('home-link').addEventListener('click', () => window.location.href = "../public/Test.html");
 		document.getElementById('menu-link').addEventListener('click', () => window.location.href = "../public/Menu.html");
 		document.getElementById('reservations-link').addEventListener('click', () => window.location.href = "../public/Reservations.html");
 		document.getElementById('events-link').addEventListener('click', () => window.location.href = "../public/Events.html");
