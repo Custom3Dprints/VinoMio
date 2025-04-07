@@ -20,7 +20,7 @@ const db = getFirestore(app);
 const storage = getStorage(app);
 
 const events_container = document.getElementById("events-container");
-events_container.innerHTML = '<h2>Events</h2>';
+events_container.innerHTML = '<h2>Eventos</h2>';
 
 async function displayEvents() {
     try {
@@ -65,7 +65,7 @@ async function displayEvents() {
 
         if (eventsArray.length === 0) {
             console.log("No events found in the specified date range.");
-            section.innerHTML = "<p>No upcoming events.</p>";
+            section.innerHTML = "<p>No hay eventos próximos.</p>";
         } else {
             eventsArray.forEach(eventData => {
                 const eventCard = document.createElement('div');

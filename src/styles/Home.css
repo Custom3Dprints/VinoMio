@@ -7,30 +7,3 @@
 }
 
 
-/* Footer */
-.footer {
-    background: white;
-    padding: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-
-}
-
-.bottom-row {
-    display: flex;
-    flex-wrap: wrap; /* Allow content to wrap */
-    justify-content: space-around; /* Spread content evenly */
-    max-width: 1300px; /* Limit maximum width */
-    width: 100%; /* Ensure full width */
-}
-
-.bottom-cols {
-    flex: 0 1 300px; /* Allow items to grow, shrink, and have a preferred width */
-    max-width: 300px; /* Limit maximum width */
-}
-
-.bottom-cols p{
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
