@@ -1,28 +1,140 @@
-.main {
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/*
+*/
+
+.main{
+    /*
+    border: 2px solid red;
+    */
+    height: auto;
+    width: 100%;
+    
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
-.menu-images {
+.title{
+    /*
+    border: 2px solid rgb(254, 139, 56);
+    */
+    width: 100%;
+    
+    padding-left: 2vh;
+    
+    font-family: 'Roboto Slab', sans-serif;  /*font not working in this file but is in practice file */
+    
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
-.image-container {
-    width: 100%; /* or set a specific width, e.g., 300px */
-    height: auto; /* Set a specific height if needed */
-    overflow: hidden; /* Ensures image doesn't overflow */
+.title h2{
+    /*
+    border: 2px dashed rgb(254, 139, 56);
+    */
+    border-bottom: 2px solid rgb(207, 0, 0);
+    margin-top: 4vh;
+    padding-bottom: 2vh;
+    width: 40%;
+    height: auto;
+    color: rgb(207, 0, 0);
+}
+
+.container{
+    /*
+    border: 2px solid rgb(0, 247, 255);
+    */
+    height: max-content;
+
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    
+    margin: 1vh;
+}
+
+.content{
+    /*
+    border: 2px solid rgb(255, 17, 61);
+    */
+    height: auto;
+    max-height: 18vh;
+    width: 49%;
+    margin-bottom: 2vh;
+
+    display: flex;
+
+    /*ADD box shadow*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /*ADD boarder radius*/
+    border-radius: 18px;
+
+    overflow: hidden; /* Required to clip image corners */
+}
+.img{
+    /*
+    border: 2px solid rgb(17, 88, 255);
+    */
+    height: 100%;
+    width: 24%;
+}
+.text{
+    /*
+    border: 2px solid rgb(14, 9, 105);
+    */
+    height: 100%;
+    width: 70%;
+
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 20px;
+}
+.name{
+    /*
+    border: 1px solid rgb(176, 58, 255);
+    */
+    height: max-content;
+    width: auto;
+
+    padding-left: 10px;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+.description{
+    /*
+    border: 1px solid rgb(176, 58, 255);
+    */
+    height: max-content;
+    width: auto;
+    
+    padding-left: 12px;
+    margin-bottom: 14px;
+
+    color: rgb(207, 0, 0);
+    font-size: 8pt;
+
+}
+.price{
+    /*
+    border: 1px solid rgb(176, 58, 255);
+    */
+    height: max-content;
+    width: auto;
+    
+    padding-left: 25px;
+    
+    font-size: 10pt;
 }
 
-.imgs img {
-    width: 100%; /* Keeps image responsive within container */
-    height: auto; /* Maintains aspect ratio */
-    object-fit: contain; /* Or 'cover' if you want it to fill the container */
-}
 
+
+
+/*
+
+*/
