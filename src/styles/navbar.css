@@ -55,14 +55,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 50%;
 
     margin-right: 4vh;
 }
 li.navbar__ {
     list-style-type: none;
 }
-
+/*
+.navbar__{
+    display: flex;
+    min-width: max-content;
+}
+*/
 
 
 
