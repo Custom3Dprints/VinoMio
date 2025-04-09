@@ -14,14 +14,14 @@
         <div class="container">
             <form id="reservationForm">
                 <label for="name">Nombre Completo:</label>
-                <input type="text" id="name" name="name" required><br><br>
+                <input type="text" id="name" name="name" placeholder="Nombre apellido" required><br><br>
                 <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required><br><br>
+                <input type="email" id="email" name="email" placeholder="correro@ejemplo.com" required><br><br>
                 <label for="phone">Número de teléfono:</label>
                 <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required><br><br>
                 <label for="people">Cuantas personas:</label>
                 <select id="people" name="people" required>
-                    <option value="" disabled selected>1 persona</option>
+                    <option value="" disabled selected></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -56,8 +56,8 @@
     <script src="../src/Reservations.js"></script>
 
     <!--EmailJS-->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
         // Initialize EmailJS with your user ID
         emailjs.init("yYTksWw1NPD-ZnVyj"); 
 

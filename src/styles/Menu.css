@@ -1,5 +1,5 @@
 
-*{
+body{
     margin: 0;
     padding: 0;
 }
@@ -144,4 +144,4 @@
     .content {
       width: 100%;
     }
-  }
+}

@@ -8,7 +8,7 @@ function populateTimeDropdown() {
     const currentMinutes = currentTime.getMinutes();
     const currentTimeInMinutes = currentHours * 60 + currentMinutes;
     
-    // Times available from 3:00 PM (15:00) to 10:00 PM (22:00) in 30-minute increments
+    // Times available from 3:30 PM (15:00) to 8:30 PM (22:00) in 30-minute increments
     const timeOptions = [
         "15:30", "16:00", "16:30", "17:00", "17:30",
         "18:00", "18:30", "19:00", "19:30", "20:00", "20:30"
@@ -25,7 +25,7 @@ function populateTimeDropdown() {
             dropdown.appendChild(option);
         }
         
-        /*
+        /*temp for testing
         //temp for testing
         const option = document.createElement('option');
         option.value = time;

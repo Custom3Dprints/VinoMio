@@ -1,14 +1,11 @@
-*{
+body{
 	margin: 0;
 	padding: 0;
 	background-color: #ffffff;
-}
 
-body{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	height: 100vh; /* Make body full screen height */
 	display: flex;
 	flex-direction: column; /* Stack content vertically */
 	justify-content: space-between; /* Push footer to bottom */
@@ -17,7 +14,7 @@ body{
 
 .slideshow {
 	width: 100%;
-	height: 90vh;
+	height: 88vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -26,6 +23,7 @@ body{
 .slideshow-container {
 	position: relative;
 	width: 60%;
+	height: 100%;
 	max-width: 800px;
 	height: 500px;
 	overflow: hidden;
@@ -45,33 +43,4 @@ body{
 	transform: translate(-50%, -50%); /* Offset to fully center */
 	transition: opacity 1s ease;
 	opacity: 0;
-}
-	
-
-
-/* Footer */
-.footer {
-	background: white;
-	padding: 20px;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-}
-
-.bottom-row {
-	display: flex;
-	flex-wrap: wrap; /* Allow content to wrap */
-	justify-content: space-around; /* Spread content evenly */
-	max-width: 1300px; /* Limit maximum width */
-	width: 100%; /* Ensure full width */
-}
-
-.bottom-cols {
-	flex: 0 1 300px; /* Allow items to grow, shrink, and have a preferred width */
-	max-width: 300px; /* Limit maximum width */
-}
-
-.bottom-cols p{
-	margin-top: 5px;
-	margin-bottom: 5px;
 }
