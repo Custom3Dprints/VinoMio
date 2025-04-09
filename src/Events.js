@@ -82,10 +82,10 @@ async function displayEvents() {
                 const formattedDate = eventData.adjustedDate.toLocaleDateString('en-US', options);
 
                 const eventDate = document.createElement('p');
-                eventDate.textContent = `Date: ${formattedDate}`;
+                eventDate.textContent = `Fecha: ${formattedDate}`;
 
                 const eventDescription = document.createElement('p');
-                eventDescription.textContent = `Description: ${eventData.description}`;
+                eventDescription.textContent = `\n${eventData.description}`;
 
                 pContainer.appendChild(eventDate);
                 pContainer.appendChild(eventDescription);
