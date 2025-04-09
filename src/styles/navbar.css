@@ -3,32 +3,10 @@
     margin: 0;
     padding: 0;
     background-color: #ffffff;
+    font-family: 'Roboto Slab', sans-serif; 
 }
 
-.navbar{
-    background: #ffffff;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-}
-
-.navbar__container{
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    z-index: 1;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 50px;
-}
-
-#navbar__logo img {
+.navbar__logo img {
     width: 80px; /* adjust logo width as needed */
     height: 80px; /* adjust logo height as needed */
     border-radius: 50%; /* makes logo image circular */
@@ -36,32 +14,57 @@
     margin-right: 10px; /* spacing between logo and text */
 }
 
-#navbar__logo{
-    background-color: #d50000;
-    background-size: 100%;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    display:flex;
+.navbar__container{
+    /*
+    border: 2px solid rgb(255, 0, 0);
+    */
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.navbar__logo{
+    /*
+    border: 2px solid pink;
+    */
+    color: rgb(196, 42, 42);
+    
+    display: flex;
     align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: 800;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
+
+    min-width: max-content;
 }
 
 
-.fa-gem{
-    margin-right: 0.5rem;
+.menu-container{
+    /*
+    border: 2px solid rgb(115, 7, 121);
+    */
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
 }
 
 .navbar__menu{
+    /*
+    border: 2px solid rgb(231, 73, 239);
+    */
+
     display: flex;
     align-items: center;
-    list-style: none;
-    text-align: center;
+    justify-content: space-between;
+    width: 50%;
+
+    margin-right: 4vh;
 }
+li.navbar__ {
+    list-style-type: none;
+}
+
+
+
 
 .navbar__item{
     height: 80px;
@@ -138,12 +141,15 @@
 
     .navbar__menu.active{
         background: #ffffff;
-        top: 100%;
+        top: 8%;
         opacity: 1;
         transition: all 0.5s ease;
         z-index: 99;
         height: 80vh;
         font-size: 1.6rem;
+
+        display: flex;
+        flex-direction: column;
     }
 
     #navbar__logo{
@@ -153,9 +159,10 @@
     .navbar__toggle .bar{
         width: 25px;
         height: 3px;
-        margin: 5px auto;
         transition: all 0.3s ease-in-out;
         background: #000000;
+       margin: 5px auto;
+
     }
 
     .navbar__item{
@@ -171,7 +178,7 @@
 
     #mobile-menu{
         position: absolute;
-        top: 20%;
+        top: 2%;
         right: 5%;
         transform: translate(5%, 20%);
     }

@@ -1,10 +1,10 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vino Mío</title>
-    <link rel="stylesheet" href="../src/styles/navbar.css">
+    <link rel="stylesheet" href="../src/styles/navbar.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
     <link
     rel="stylesheet"
     href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
@@ -17,47 +17,52 @@
     <!--Navbar-->
     <nav class="navbar">
         <div class="navbar__container">
-            <h1 id="navbar__logo">
+
+            <h1 class="navbar__logo">
                 <img src="../src/images/logo.png" alt="logo">
                 Vino Mío
             </h1>
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+
+            <div class="menu-container">
+                <div class="navbar__toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                
+                <ul class="navbar__menu">
+                    <li class="navbar__">
+                        <a class="navbar__links" id="home-link">
+                            Página de inicio
+                        </a>
+                    </li>
+                    <li class="navbar__" id="Menu">
+                        <a class="navbar__links" id="menu-link">
+                            Menú
+                        </a>
+                    </li>
+                    <li class="navbar__">
+                        <a class="navbar__links" id="reservations-link">
+                            Reserva
+                        </a>
+                    </li>
+                    <li class="navbar__">
+                        <a class="navbar__links" id="events-link">
+                            Eventos
+                        </a>
+                    </li>
+                    <li class="navbar__">
+                        <a class="navbar__links" id="about-link">
+                            Sobre Nosotros
+                        </a>
+                    </li>
+                    <li class="navbar__">
+                        <a class="navbar__links" id="reviews-link">
+                            Reseñas
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <ul class="navbar__menu">
-                <li class="navbar__">
-                    <a class="navbar__links" id="home-link">
-                        Página de inicio
-                    </a>
-                </li>
-                <li class="navbar__" id="Menu">
-                    <a class="navbar__links" id="menu-link">
-                        Menú
-                    </a>
-                </li>
-                <li class="navbar__">
-                    <a class="navbar__links" id="reservations-link">
-                        Reserva
-                    </a>
-                </li>
-                <li class="navbar__">
-                    <a class="navbar__links" id="events-link">
-                        Eventos
-                    </a>
-                </li>
-                <li class="navbar__">
-                    <a class="navbar__links" id="about-link">
-                        Sobre Nosotros
-                    </a>
-                </li>
-                <li class="navbar__">
-                    <a class="navbar__links" id="reviews-link">
-                        Reseñas
-                    </a>
-                </li>
-            </ul>
         </div>
     </nav>
 </body>

@@ -26,7 +26,7 @@
     
     padding-left: 2vh;
     
-    font-family: 'Roboto Slab', sans-serif;  /*font not working in this file but is in practice file */
+    font-family: 'Roboto Slab', sans-serif;  
     
     display: flex;
     flex-direction: column;
@@ -52,10 +52,9 @@
 
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-
     justify-content: space-between;
     
+    flex-wrap: wrap;
     margin: 1vh;
 }
 
@@ -64,11 +63,13 @@
     border: 2px solid rgb(255, 17, 61);
     */
     height: auto;
+    min-height: 70px;
     max-height: 18vh;
     width: 49%;
     margin-bottom: 2vh;
 
     display: flex;
+
 
     /*ADD box shadow*/
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -138,3 +139,9 @@
 /*
 
 */
+
+@media (max-width: 768px) {
+    .content {
+      width: 100%;
+    }
+  }
